@@ -57,6 +57,7 @@ h1{margin:0;font-size:30px;color:var(--gold)}
 .section-title h3{margin:0;color:var(--gold);letter-spacing:1px;text-shadow:0 0 8px rgba(250,204,21,.3)}
 
 /* Product cards */
+/* Desktop Default — 4 Columns */
 /* DESKTOP: 4×4 fixed grid */
 .products-grid {
   display: grid;
@@ -184,8 +185,14 @@ footer a:hover{color:var(--blue)}
     <div class="offer-card">
       <div class="offer-left"><div class="badge">VIP</div></div>
       <div class="offer-main">
-        <div class="offer-title">💎 Gold Wash Offer — Limited Slots</div>
-        <div class="offer-desc">Dummy description for your exclusive offer. Replace later with real content.</div>
+        <div class="offer-title">💎 Golden Care Offer — Limited Slots</div>
+        <div class="offer-desc">
+      🌟 Annual Package consist of 24 Premium washes <br>
+      🌟 Periodic General check up <br>
+      🌟 Grand Opening Offer 30,000 worth services @ 9,000/- <br>
+      🌟 Offer valid till 03-12-2025 <br>
+      🌟 only 300 slots available .
+        </div>
         <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
         <div class="progress-text" id="progressText">7 of 20 Slots Left</div>
         <a class="btn" id="offerCTA" href="https://wa.me/919003979426?text=Interested%20in%20Gold%20Wash%20Offer" target="_blank">📲 Avail Offer</a>
@@ -424,7 +431,7 @@ footer a:hover{color:var(--blue)}
     </ul>
 
     <!-- APPLY NOW BUTTON (GOOGLE FORM LINK) -->
-    <a href="YOUR_GOOGLE_FORM_LINK_HERE" 
+    <a href="https://forms.gle/YqNJoFpUr8CBj2CS6" 
        target="_blank"
        class="btn"
        style="
@@ -553,14 +560,57 @@ const autoServices = [
 ];
 
 const otherServices = [
-  {icon:'🧽',name:'Interior Detailing',price:'₹799',desc:`Complete interior care — deep vacuuming, upholstery cleaning, dashboard & trim restoration, and odour neutralization.`},
-  {icon:'💨',name:'AC Vent Clean',price:'₹499',desc:`Sanitize and clean AC vents and ducts to improve air quality and remove dust and fungal spores.`},
-  {icon:'🪙',name:'Polish Finish',price:'₹899',desc:`Multi-stage paint polishing to remove light scratches and restore reflective clarity to your vehicle's paint.`},
-  {icon:'🪑',name:'Leather Seat Care',price:'₹899',desc:`Leather cleaning, conditioning and protection to prevent cracks and UV damage.`},
-  {icon:'🧼',name:'Express Wash',price:'₹299',desc:`Quick exterior wash and dry for a fast refresh when you're short on time.`},
-  {icon:'🪄',name:'Interior Vacuum',price:'₹349',desc:`Efficient vacuuming of carpets, seats and crevices to remove dust and debris.`},
-  {icon:'🌙',name:'Full Gold Package',price:'₹1499',desc:`A premium package combining interior & exterior deep cleaning, polishing, wax and protective treatments.`},
-  {icon:'🪞',name:'Eco Wash',price:'₹299',desc:`Waterless eco-friendly wash that conserves water while delivering a spotless finish.`}
+  {icon:'🚗',name:'Hire a Driver',price:'₹799',desc:`
+- Professional, Experienced & Verified Drivers <br>
+- Available for Hourly, Daily & Outstation Trips <br>
+- Safe, Comfortable & Stress-Free Travel <br>
+- On-Demand Doorstep Pickup & Drop Service <br>
+- Affordable Rates With Transparent Pricing <br>
+- Note: Price vary based on requirements `},
+  {icon:'🪑',name:'Man Power Support',price:'₹3999',desc:`
+- Skilled and Verified Workforce on Demand <br>
+- Reliable Support for Daily Operations <br>
+- Flexible Contract and Temporary Staffing <br>
+- Trained Personnel for High Efficiency <br>
+- Cost-Effective Staffing for Business Needs`},
+  {icon:'🧽',name:'Pet Care',price:'₹599',desc:`
+- Trusted, Trained Caretakers for All Pet Needs <br>
+- Safe, Stress-Free Care at Your Home or Ours <br>
+- Daily Feeding, Walking & Hygiene Support <br>
+- Gentle Handling With Verified Professionals <br>
+- Reliable Pet Care Designed for Busy Lifestyles`},
+  {icon:'🚀',name:'Start up Support',price:'₹899',desc:`
+- Elite guidance for shaping high-value, scalable ventures <br>
+- Precision support from concept validation to launch <br>
+- Strategic frameworks engineered for rapid market entry <br>
+- Resource-efficient planning for sustainable growth <br>
+- Premium execution support to build investor-ready momentum`},
+  {icon:'🧼',name:'Bridal Makeup',price:'₹24999',desc:`
+- Signature bridal artistry tailored to your unique features <br>
+- High-definition, long-lasting luxury products for flawless radiance <br>
+- Personalized pre-bridal consultation and look design <br>
+- Skin-enhancing techniques for a luminous, camera-ready finish <br>
+- Elite bridal experience crafted for your once-in-a-lifetime moment`},
+  {icon:'🧰',name:'Automobile Buy & Sell',price:'₹3999',desc:`
+- Expert-assisted buying and selling with complete transparency <br>
+- Professionally inspected vehicles for assured quality <br>
+- Premium guidance to match buyers with the perfect vehicle <br>
+- Smooth documentation, transfer, and delivery support <br>
+- A trusted platform ensuring value-driven, worry-free deals`},
+  {icon:'🌙',name:'2 Moon Silver Bond',price:'₹30000',desc:`
+⭐  2 Moon Silver Bond — A Smarter Path to Steady Wealth <br>
+⭐  Invest with Confidence in the Trusted 2 Moon Silver Bond <br>
+⭐  Secure, Transparent & Growth-Driven <br>
+⭐  Build Long-Term Financial Strength  <br>
+⭐  A Premium Investment Opportunity Designed for Today’s Smart Investors <br>
+⭐  Earns 12% PA `},
+  {icon:'🌙',name:'2 Moon Gold Bond',price:'₹90000',desc:`
+⭐  Step into elite wealth growth with the exclusive 2 Moon Golden Bond. <br>
+⭐  A premium investment gateway designed for stable, long-term financial gains. <br>
+⭐  Join our Golden Bond program and build wealth with confidence and clarity. <br>
+⭐  Experience secure, transparent, and growth-focused investing with 2 Moon Enterprises. <br>
+⭐  The 2 Moon Golden Bond — where your investment works smarter, stronger, and safer <br>
+⭐  Earns 18% PA `}
 ];
 
 /* --- Create product cards (alternating left/right) --- */
@@ -604,7 +654,7 @@ function closeModal(){
 window.addEventListener('click', (e)=> { if (e.target === modal) closeModal(); });
 
 /* --- Offer progress & admin --- */
-function updateProgress(left = 7, total = 20){
+function updateProgress(left = 300, total = 300){
   const fill = document.getElementById('progressFill');
   const pct = Math.max(0, Math.min(100, (left/total)*100));
   fill.style.width = pct + '%';
@@ -666,5 +716,3 @@ document.addEventListener('keydown', (e) => {
 </html>
 
   
-
-
